@@ -1,0 +1,5 @@
+{%from "bootstrap5/form.html" import render_form %} {%block content%} {%include
+"base.html"%} {{render_form(form)}} {% with messages = get_flashed_messages() %}
+{%if messages %} {%for message in messages%}
+<p class="flash">{{message}}</p>
+{% endfor %} {% endif %} {% endwith %} {%include "footer.html"%} {%endblock%}
